@@ -81,21 +81,58 @@ UI	Custom CSS
 
 📁 Project Structure
 src/
- ├── apis/               # mock automation + simulate APIs
- ├── components/
- │   ├── workflow/       # canvas, node palette, base node
- │   ├── panels/         # config + testing panel
- │   ├── forms/          # forms per node type
- ├── context/            # global workflow state
- ├── types/              # common workflow interfaces
- └── utils/              # graph + validation helpers
+│
+├── apis/                   # Mock API logic (/simulate, /automations)
+│   └── mockApi.ts
+│
+├── components/
+│   ├── common/             # Shared small reusable UI parts
+│   ├── workflow/           # Canvas, Nodes, Drag+drop logic
+│   ├── forms/              # Node configuration forms
+│   └── panels/             # Right panel (Config + Simulator)
+│
+├── context/                # Global management for workflow state
+│
+├── types/                  # TS interfaces: Node, Config, Simulation types
+│
+└── utils/                  # Graph traversal + validation engine
 
-▶ Run Locally
+
+How to Run the Project (Step-by-Step)
+Prerequisites
+
+Ensure you have installed:
+
+Node.js (v18+ recommended)
+
+npm (comes with Node)
+
+Git
+
+Clone the repository
+git clone https://github.com/Aditya1416/tredence-hr-workflow-designer.git
+
+cd tredence-hr-workflow-designer
+
+Install Dependencies
 npm install
+
+Start the Development Server
 npm run dev
 
 
-Visit: http://localhost:5173
+When the server boots, the terminal will show a URL similar to:
+
+http://localhost:5173/
+
+
+Go to the displayed URL (port may change depending on your machine).
+
+Build for Production
+npm run build
+
+Preview Production Build
+npm run preview
 
 📦 Export & Integration
 
